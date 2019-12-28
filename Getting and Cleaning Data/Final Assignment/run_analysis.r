@@ -94,3 +94,4 @@ names(mean_df) <- names(df)[1:(ncol(df)-2)]
 mean_df <- cbind(mean_df,merge(label,1:30))
 mean_df <- rename(mean_df,'activity'='V2')
 mean_df <- rename(mean_df,'subject_number'='y')
+write.table(file = './mean_df.txt',x = mean_df,row.name=FALSE) 
